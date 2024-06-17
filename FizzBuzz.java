@@ -15,8 +15,8 @@ public class FizzBuzz {
      answer[i] == i (as a string) if none of the above conditions are true.
      */
     public static void main(String[] args) {
-        System.out.println(printFizzBuzzV1(5));
-        System.out.println(printFizzBuzzV2(5));
+        Util.print("printFizzBuzzV1", () -> printFizzBuzzV1(1000));
+        Util.print("printFizzBuzzV2", () -> printFizzBuzzV2(1000));
 
     }
 

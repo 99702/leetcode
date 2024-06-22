@@ -25,16 +25,12 @@ public class FizzBuzz {
         for (int i = 1; i <= n; i++) {
             if (i % 5 == 0 && i % 3 == 0) {
                 res.add("FizzBuzz");
-                continue;
             } else if (i % 3 == 0) {
                 res.add("Fizz");
-                continue;
             } else if (i % 5 == 0) {
                 res.add("Buzz");
-                continue;
             } else {
                 res.add("" + i);
-                continue;
             }
         }
         return res;

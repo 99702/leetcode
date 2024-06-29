@@ -7,6 +7,7 @@ public class Palindrome {
         Util.print("isPalindromeV1", () -> isPalindromeV1("Marge, let's \"[went].\" I await {news} telegram."));
         Util.print("isPalindromeV2", () -> isPalindromeV2("Marge, let's \"[went].\" I await {news} telegram."));
         Util.print("isPalindromeV3", () -> isPalindromeV3("Marge, let's \"[went].\" I await {news} telegram."));
+        Util.print("isPalindromeV4", () -> isPalindromeV4("Marge, let's \"[went].\" I await {news} telegram."));
     }
 
     public static boolean isPalindromeV1(String s) {
@@ -56,4 +57,19 @@ public class Palindrome {
         }
         return true;
     }
+
+    public static boolean isPalindromeV4(String s) {
+        int len = s.length();
+        if (len == 1 || len == 0) return true;
+        s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        len = s.length();
+        if (len == 1 || len == 0) return true;
+        for(int i =0, j=len ; i< len && j>0 ; i++,j--){
+            if(s.charAt(i)!=s.charAt(j-1)){
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
